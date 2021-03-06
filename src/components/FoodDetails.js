@@ -11,7 +11,7 @@ state = {
 }
 
 componentDidMount(){
-    axios.get(`https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=74655840ee6247938738e3747cddf842`)
+    axios.get(`https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=c40a678376e24366886a26ba00de5aab`)
     .then(response=>{
         console.log(response.data, this.props)
         this.setState({
@@ -47,7 +47,7 @@ showDetails = () =>{
 
 
   
-    
+        <br></br>
 
         <button type="button" onClick={this.props.history.goBack}>
                   Go back to search page

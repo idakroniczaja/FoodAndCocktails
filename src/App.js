@@ -6,14 +6,14 @@ import Food from './components/Food'
 import FoodDetails from './components/FoodDetails';
 import Cocktail from './components/Cocktail';
 import CocktailDetails from './components/CocktailDetails'
-import ShowAll from './components/ShowAll'
+
 
 
 
 class App extends React.Component {
   render(){
     return(
-      <>
+      <div className="App">
     
     <nav>
     <Link to={'/food'}>What are you hungry for?</Link>
@@ -48,17 +48,13 @@ class App extends React.Component {
             render={(props) => <CocktailDetails  {...props}/>}
           />   
 
-        <Route
-            exact
-            path="/showall"
-            render={(props) => <ShowAll  {...props} />}
-          />   
+  
 
       </Switch>
 
     
 
-      </>
+      </div>
     )
   }
 }

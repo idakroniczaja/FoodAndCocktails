@@ -10,7 +10,7 @@ export class Food extends Component {
       }
 
       search = (e)=> {
-        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=74655840ee6247938738e3747cddf842&query=${e.target.value}`)
+        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=c40a678376e24366886a26ba00de5aab&query=${e.target.value}`)
         .then(response=>{
           console.log(response.data.results)
 

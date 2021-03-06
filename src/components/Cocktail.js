@@ -6,6 +6,7 @@ import CocktailDetails from "./CocktailDetails";
 export class Cocktail extends Component {
   state = {
     cocktail: [],
+    drink:{}
   };
 
   search = (e) => {
@@ -24,16 +25,26 @@ export class Cocktail extends Component {
   allCocktails = () => {
     return this.state.cocktail.map((each) => {
       return (
-        <Link to={`/cocktail/${each.idDrink}`}>
-          <li>{each.strDrink}</li>
-        </Link>
-      );
-    });
-  };
+        <button onClick={()=>this.setState({drink:each})}>
+        {each.strDrink}
+        </button>
 
-  render() {
-    return (
+
+
+
+// <Link to={`/cocktail/${each.idDrink}`}>
+//   <li>{each.strDrink}</li>
+// </Link>
+);
+});
+};
+
+render() {
+  console.log(this)
+  return (
       <div>
+        <h1>Cocktails:</h1>
+        <br></br>
         <input
           onChange={this.search}
           name="drink"
@@ -41,12 +52,18 @@ export class Cocktail extends Component {
           type="text"
         />
 
-        <h1>Cocktails:</h1>
        <div>
          {this.allCocktails()}
        </div> 
 
+       {this.state.drink.strDrink}
+    <CocktailDetails id={this.state.drink.idDrink}/>
 
+
+      
+       
+
+  
       </div>
     );
   }

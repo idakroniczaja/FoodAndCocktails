@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import FoodDetails from './FoodDetails'
+
 
 
 export default class CocktailDetails extends Component {
@@ -9,15 +9,18 @@ state = {
 
 }
 
-componentDidMount(){
-   
-    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${this.props.match.params.id}`)
-    .then(response=>{
-      
-        this.setState({
-            cocktailDetails: response.data.drinks
-        })
-    })
+componentWillReceiveProps(props){
+    console.log(props)
+   if (props.id){
+
+       axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${props.id}`)
+       .then(response=>{
+         
+           this.setState({
+               cocktailDetails: response.data.drinks
+           })
+       })
+   }
 }
 showDetails = () =>{
     return this.state.cocktailDetails.map(each=>{
