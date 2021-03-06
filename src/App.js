@@ -14,7 +14,13 @@ class App extends React.Component {
   render(){
     return(
       <>
-    hello
+    
+    <nav>
+    <Link to={'/food'}>What are you hungry for?</Link>
+
+    </nav>
+
+
       <Switch>
 
         <Route
