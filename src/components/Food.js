@@ -38,6 +38,8 @@ export class Food extends Component {
     render() {
       return (
         <div>
+        
+
         <input 
           onChange={this.search}
           name="name"
