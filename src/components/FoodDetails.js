@@ -25,22 +25,56 @@ export default class FoodDetails extends Component {
   showDetails = () => {
     return (
       <>
-        <img src={this.state.foodDetails.image} />
-
+        {/* <img src={this.state.foodDetails.image} />
         <div
           dangerouslySetInnerHTML={{
             __html: this.state.foodDetails.instructions,
           }}
-        ></div>
+        >
+        </div> */}
+
+
+  <section className="page-section">
+  <div className="container">
+    <div className="product-item">
+      <div className="product-item-title d-flex">
+        <div className="bg-faded p-5 d-flex ml-auto rounded">
+          <h2 className="section-heading mb-0">
+            <span className="section-heading-upper">Your chosen recipe</span>
+            <span className="section-heading-lower">{this.state.foodDetails.title}</span>
+          </h2>
+        </div>
+      </div>
+      <img className="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src={this.state.foodDetails.image} alt={this.state.foodDetails.title}/>
+      <div className="product-item-description d-flex mr-auto">
+        <div className="bg-faded p-5 rounded">
+
+          <p className="mb-0" dangerouslySetInnerHTML={{
+            __html: this.state.foodDetails.instructions,
+          }}></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       </>
     );
   };
+
+
+
+
+
+
+
 
   render() {
     return (
       <>
         <div>
-          <h1>{this.state.foodDetails.title}</h1>
           {this.showDetails()}
         </div>
 
@@ -51,7 +85,7 @@ export default class FoodDetails extends Component {
         <br></br>
 
         <button type="button" onClick={this.props.history.goBack}>
-          Go back to search page
+          Wanna search more?
         </button>
       </>
     );
