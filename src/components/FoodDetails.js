@@ -25,13 +25,6 @@ export default class FoodDetails extends Component {
   showDetails = () => {
     return (
       <>
-        {/* <img src={this.state.foodDetails.image} />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: this.state.foodDetails.instructions,
-          }}
-        >
-        </div> */}
 
 
   <section className="page-section">
@@ -48,6 +41,9 @@ export default class FoodDetails extends Component {
       <img className="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src={this.state.foodDetails.image} alt={this.state.foodDetails.title}/>
       <div className="product-item-description d-flex mr-auto">
         <div className="bg-faded p-5 rounded">
+        <h2 class="section-heading mb-0">
+          <span class="section-heading-upper">Instructions:</span>
+          </h2>
 
           <p className="mb-0" dangerouslySetInnerHTML={{
             __html: this.state.foodDetails.instructions,
@@ -55,6 +51,19 @@ export default class FoodDetails extends Component {
 
         </div>
       </div>
+
+
+      <div class="product-item-description d-flex mr-auto">
+          <ol class="bg-faded p-5 rounded">
+          <h2 class="section-heading mb-0">
+          <span class="section-heading-upper">Ingredients:</span>
+          </h2>
+          {this.state.foodDetails.extendedIngredients?.map(each=>{
+            return <li>{each.name.charAt(0).toUpperCase()+each.name.slice(1)}</li>
+          })}
+     
+          </ol>
+        </div>
     </div>
   </div>
 </section>
