@@ -12,7 +12,7 @@ export default class FoodDetails extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=c40a678376e24366886a26ba00de5aab`
+        `https://api.spoonacular.com/recipes/${this.props.match.params.id}/information?apiKey=ea78a6619ab541c4bd2f63c9a56b443f`
       )
       .then((response) => {
         console.log(response.data, this.props);
