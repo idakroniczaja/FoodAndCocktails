@@ -1,7 +1,7 @@
-PROJECT NAME:
+PROJECT NAME: Food and Cocktails
 
 
-DESCRIPTION:
+DESCRIPTION: Choose recipe for food and pair it with cocktail recipe
 
 
-AUTHOR:
+AUTHOR: Ida Kronic Zaja

@@ -40,7 +40,6 @@ export class Cocktail extends Component {
 };
 
 render() {
-  console.log(this)
   return (
       <div>
         <h1>Cocktails:</h1>
