@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .App-logo {
@@ -53,4 +52,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+.coctailButton{
+  background-color: #bd8911;
+  box-shadow: 0px 39px 0px -24px ;
+	background-color:#deb047;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px white;
+}
+
+.coctailButton:hover {
+	background-color:white;
+}
+.coctailButton:active {
+	position:relative;
+	top:1px;
 }

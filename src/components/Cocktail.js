@@ -25,44 +25,40 @@ export class Cocktail extends Component {
   allCocktails = () => {
     return this.state.cocktail.map((each) => {
       return (
-        <button onClick={()=>this.setState({drink:each})}>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+
+        <button className='coctailButton' onClick={()=>this.setState({drink:each})}>
         {each.strDrink}
         </button>
 
+        </div>
 
 
 
-// <Link to={`/cocktail/${each.idDrink}`}>
-//   <li>{each.strDrink}</li>
-// </Link>
+
+
 );
 });
 };
 
 render() {
   return (
-      <div>
-        <h1>Cocktails:</h1>
+      <div className='site-heading-lower' style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <h1 className="text-uppercase text-expanded" style={{color: "#d69d18"}}>Cocktails:</h1>
         <br></br>
-        <input
+        <input style={{marginBottom:'5vh'}}
           onChange={this.search}
           name="drink"
           placeholder="your cocktail, please"
           type="text"
         />
 
-       <div>
+       <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center', width:'85vw'}}>
          {this.allCocktails()}
        </div> 
 
-       {this.state.drink.strDrink}
-    <CocktailDetails id={this.state.drink.idDrink}/>
-
-
-      
-       
-
   
+    <CocktailDetails id={this.state.drink.idDrink}/>
       </div>
     );
   }

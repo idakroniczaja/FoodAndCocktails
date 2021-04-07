@@ -82,7 +82,7 @@ export default class FoodDetails extends Component {
 
   render() {
     return (
-      <>
+      <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginBottom:'10vh'}}>
         <div>
           {this.showDetails()}
         </div>
@@ -93,10 +93,10 @@ export default class FoodDetails extends Component {
 
         <br></br>
 
-        <button type="button" onClick={this.props.history.goBack}>
+        <button className='coctailButton'  onClick={this.props.history.goBack}>
           Wanna search more?
         </button>
-      </>
+      </div>
     );
   }
 }
